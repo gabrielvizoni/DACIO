@@ -1,0 +1,24 @@
+// solicitar 10 numeros
+// NAO PODE: usar for, numeros negativos, vetores 
+// DEVE: usar somente 3 variaveis, apresentar soma, media, 
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    float numero, soma = 0;
+    while (i <= 10) {
+        printf("Valor %d: ", i);
+        scanf("%f", &numero);
+        if (numero > 0) {
+            soma += numero;
+        }
+        i++;
+    }
+
+    printf("SOMA: %.2f\n", soma);
+    printf("MEDIA: %.2f\n", soma / 10);
+
+    return 0;
+}
