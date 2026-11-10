@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+//(URI 1013) Faça um programa que leia 10 valores e apresente o maior dos 10 valores lidos seguido da mensagem “é o maior”. Utilize a fórmula:
+//MaiorAB = (a + b + abs(a - b)) / 2
+//bloco reutilizavel por todo programa que recebe dois valores inteiros para realizar o calculo
+
+int calcMaior(int a, int b){
+	return ((a+b+(abs((a-b))))/2);
+}
+
+int main(){
+	int numero[10];
+	int i,maior;
+	printf("--------------------------------------\n");
+	printf("Digite 10 valores:                    |\n");
+	printf("--------------------------------------\n");
+	for(i=0;i<10;i++){
+		printf("Valor %d:",i+1);
+		scanf("%d",&numero[i]);
+	}
+	//da pra colocar atribuição na condição
+	for(i=1, maior=numero[0]; i<10; i++){
+		maior = calcMaior(maior,numero[i]);					
+	}
+	
+	printf("O maior valor e: %d",maior);
+	return 0;
+	
+}
